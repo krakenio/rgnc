@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+      <style>
+      /* ==================================================================
+ CSS Reset
+================================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* ==================================================================
+ Basic Document Styles
+================================================================== */
+
+body {
+  line-height: 1;
+  color: #494949;
+  font-size: 16px;
+  font-family: arial;
+  background: ;
+  background-size: 100% 100%
+  height: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+input,
+select,
+textarea { font: 16px/32px arial }
+
+
+/* ==================================================================
+Typography
+================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-family: arial;
+  font-size: 37px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 0px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+h2 {
+  font-family: arial;
+  font-size: 27px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+h3 {
+  font-family: arial;
+  font-size: 23px;
+}
+
+h4 {
+  font-family: arial;
+  font-size: 19px;
+}
+
+h5 {
+  font-family: arial;
+  font-size: 18px;
+}
+
+h6 {
+  font-family: arial;
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-family: arial;
+}
+
+p.lead {
+  font-family: arial;
+  font-size: 21px;
+  padding: 0;
+  font-weight: 300;
+}
+a, a > * {
+  color: #2a6496;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  font-family: arial;
+}
+
+a:hover, a > *:hover {
+  text-decoration: none;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  color: #5AA9CE;
+  font-weight: 700;
+}
+
+.color-white {
+  color: #fff;
+}
+
+/* ==================================================================
+  Basic Layout Styles
+================================================================== */
+
+.container-wrapper{
+  max-width: 1900px;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+  background: #000;
+}
+
+section {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right { 
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+.all-margin {
+  margin: 20px !important;
+}
+
+.left-margin {
+  margin-left: 20px !important;
+}
+
+.right-margin {
+  margin-right: 20px !important;
+}
+
+.top-margin {
+  margin-top: 20px !important;
+}
+
+.bottom-margin {
+  margin-bottom: 20px !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-left-margin {
+  margin-left: 0 !important;
+}
+
+.no-right-margin {
+  margin-right: 0 !important;
+}
+
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
+}
+
+.no-right-padding {
+  padding-right: 0 !important;
+}
+
+.no-top-padding {
+  padding-top: 0 !important;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0 !important;
+}
+
+.csstransitions .animated,
+.animated {
+    visibility: hidden;
+}
+
+.csstransitions .visible {
+    visibility: visible;
+}
+
+.img-rounded {
+  border-radius: 100%;
+}
+
+
+.container{
+  width: 1000px;
+  height: auto;
+  float: none;
+  margin: 0 auto;
+  display: table;
+  background: #fff;
+}
+header{
+  width:100%;
+  height: auto;
+  float: left;
+}
+.header-top{
+  width: 100%;
+  height: auto;
+  float: left;
+}
+.header-logo{
+  width: 25%;
+  height: auto;
+  float: left;
+}
+.header-logo img{
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 33px 10px 10px 0;
+}
+.cash-flow-text {
+  float: left;
+  height: auto;
+  width: 50%;
+  max-width: 490px;
+}
+h6.cash-flw {
+  color: #D7C863;
+  display: table-cell;
+  float: none;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: 800;
+  height: 81px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  padding-top: 36px;
+}
+.toll-free-no{
+  width:25%;
+  height: auto;
+  float: left;
+}
+.toll-free-no ul {
+  float: right;
+  padding: 48px 0 0;
+  width: auto;
+}
+.toll-free-no ul li{
+  float: left;
+  padding: 2px;
+}
+.toll-free-no ul li img {
+  float:left;
+  margin-top: -5px;
+}
+.header2{
+  width: 100%;
+  height: auto;
+  float: left;
+}
+.apply-go {
+  float: left;
+  height: auto;
+  width: 40%;
+  padding-left: 10px;
+}
+.menu-item{
+  width: 60%;
+  float: left;
+  height: auto;
+}
+.menu-item ul {
+  float: right;
+  height: auto;
+  width: auto;
+  padding: 10px 0;
+} 
+.menu-item ul li {
+  border-right: 1px solid #DDBF8B;
+  float: left;
+  font-size: 13px;
+  padding-left: 18px;
+  text-transform: uppercase;
+  padding-right: 13px;
+}
+.menu-item ul li:last-child{
+  border-right: none;
+  padding-right:0;
+}
+.apply-go input {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.inp1{
+  width: 180px;
+  height: 35px;
+  float: left;
+  background: #F8C538;
+  border:1px solid #F8C538;
+}
+.inp2{
+  width: 38px;
+  height: 35px;
+  float: left;
+  background: #EA8C32;
+  border:1px solid #EA8C32;
+}
+.slide-section {
+  float: left;
+  height: auto;
+  width: 99%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.slider{
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 3px 0;
+}
+.client-login-whole{
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-left:10px;
+  margin-top: 5px;
+}
+.client-login{
+  width: 256px;
+  height: 100px;
+  float: left;
+}
+.outer-client-login{
+  width: 28%;
+  height: 100px;
+  float: left;
+}
+.client-login p.client-lg-title {
+  color: #fdc435;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  padding: 10px 0 5px;
+  text-transform: uppercase;
+}
+.client-login label {
+  background: #fdc749;
+  color: #fff;
+  float: left;
+  font-size: 13px;
+  font-weight: 600;
+  height: 30px;
+  margin-bottom: 1px;
+  padding: 9px 2px;
+  text-transform: uppercase;
+  width: 80px;
+}
+.client-login input {
+  background: none repeat scroll 0 0 #ffffff;
+  border-radius: 0;
+  float: left;
+  height: 30px;
+  width: 145px;
+  margin-bottom: 1px;
+}
+.client-login button {
+  background: #fdc749;
+  color: #fff;
+  float: left;
+  font-size: 10px;
+  font-weight: 600;
+  height: 30px;
+  text-transform: uppercase;
+  width: 30px;
+  line-height: 28px;
+  padding: 0
+}
+.client-login-text {
+  float: left;
+  height: auto;
+  width: 70%;
+  max-width: 690px;
+}
+.client-login-text p {
+  font-size: 15px;
+  line-height: 18px;
+  margin: 15px 0 0 0;
+  text-transform: uppercase;
+  width: 99%;
+}
+.client-login-text p span{
+  font-weight:bold;
+}
+.client-login-text p.client-lg-smalltxt {
+  font-size: 13px;
+  line-height: 13px;
+  margin: 10px 0 0;
+  text-transform: none;
+}
+.client-login-text p a {
+  font-size: 15px;
+  font-weight: bold;
+}
+.dotted-borders {
+  border-bottom: 2px dotted #BEBEBE;
+  border-top: 2px dotted #BEBEBE;
+  float: left;
+  height: 10px;
+  width: 98%;
+}
+.link-lists {
+  float: left;
+  height: auto;
+  width: 99%;
+  margin: 10px 0;
+}
+.link-lists ul{
+  float: left;
+  width: 100%;
+  height: auto;
+
+}
+.link-lists ul li {
+  color: #ded48c;
+  float: left;
+  font-size: 10px;
+  font-weight: 600;
+  list-style: inside none disc;
+  margin: 7px;
+  text-transform: uppercase;
+}
+.link-lists li:first-child {
+  display: inline-block;
+}
+.link-lists ul li a{
+   color:#E4B25D; 
+}
+.thumbnail-images{
+  width: 99%;
+  height: auto;
+  float: left;
+}
+.thumbnail-one {
+  float: left;
+  height: 150px;
+  margin-right: 27px;
+  width: 225px;
+}
+.thumbnail-head {
+  background: #aea4a2 none repeat scroll 0 0;
+  float: left;
+  height: 28px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.thumbnail-img{
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 5px;
+  background: #ABA49E;
+}
+.twit-icn {
+  background:url("../images/tw.png") no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  height: 25px;
+  margin-left: 5px;
+  width: 25px;
+  margin-top: 2px;
+}
+.thumbnail-head > p {
+  color: #fff;
+  float: left;
+  font-size: 11px;
+  font-weight: 600;
+  height: auto;
+  margin: 0;
+  padding: 9px 8px 0;
+  width: auto;
+  text-transform: uppercase;
+}
+.social-icns {
+  border-bottom: 15px solid #aea39f;
+  border-top: 4px solid #aea39f;
+  float: left;
+  height: auto;
+  margin-top: 20px;
+  width: 99%;
+}
+.scl-left {
+  float: left;
+  height: auto;
+  width: 30%;
+  padding: 10px 0;
+}
+.scl-left ul{
+  width: auto;
+  height: auto;
+  float: left;
+}
+.scl-left ul li{
+  float: left;
+  width: auto;
+  height: auto;
+}
+.scl-left img {
+  float: left;
+}
+.scl-left span {
+  float: left;
+  padding: 6px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.scl-right{
+  float: left;
+  width: 70%;
+  height: auto;
+}
+.scl-right > p {
+  font-weight: normal;
+  font-size: 14px;
+  padding: 16px;
+  margin: 0;
+  text-align: right;
+}
+footer {
+  float: left;
+  height: auto;
+  width: 99%;
+  padding: 20px 0;
+}
+footer ul {
+  float: left;
+  height: auto;
+  width: auto;
+  margin-left: 14px;
+}
+footer ul li{
+  width: auto;
+  height: auto;
+  float: left;
+}
+footer ul li a {
+  color: #747570;
+  font-size: 13px;
+  padding: 3px;
+}
+footer ul li a:hover{
+  color: #F2BB3D;
+  font-size: 13px;
+  padding: 3px;
+}
+footer ul li span{
+  padding: 3px
+}
+.resp-menu-item {
+  background: #f8c538 none repeat scroll 0 0;
+  float: right;
+  height: 40px;
+  width: 40px;
+  margin-right: 2px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  display: none;
+}
+.resp-menu-item img{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+/*responsive*/
+
+ @media(max-width:1024px) {
+  
+}
+@media(max-width:1250px) {
+
+}
+@media(max-width:1023px) {
+  .apply-go {
+  width: auto;
+}
+.menu-item {
+  float: left;
+  height: auto;
+  width: 52%;
+}
+.menu-item ul {
+  background: #F8C538;
+  float: right;
+  width: 54%;
+  padding: 0;
+}
+.menu-item ul li {
+  border-right: medium none;
+  float: left;
+  height: 32px;
+  padding: 10px 13px 0;
+  text-align: right;
+  width: 100%;
+}
+.menu-item ul li:hover {
+  border-right: medium none;
+  float: left;
+  height: 32px;
+  padding: 10px 13px 0;
+  text-align: right;
+  width: 100%;
+  background:#FFA127 ;
+}
+.menu-item ul li:last-child {
+  border-right: medium none;
+   padding-right: 13px;
+}
+.toll-free-no {
+  float: left;
+  height: auto;
+  width: 50%;
+}
+.toll-free-no ul {
+  float: left;
+  padding: 0;
+  width: auto;
+}
+.resp-menu-item {
+  display: block;
+}
+.client-login-text {
+  max-width: 690px;
+  width: 47%;
+  margin-bottom: 10px;
+}
+.dotted-borders {
+  width:100%;
+   max-width: 75%;
+}
+.thumbnail-one {
+  margin-bottom: 18px;
+}
+.thumbnail-images {
+  float: none;
+  width: 73%;
+  margin: 0 auto;
+}
+.social-icns {
+  width: 74%;
+}
+.scl-left ul {
+  display: table;
+  float: none;
+  height: auto;
+  margin: 0 auto;
+  width: auto;
+}
+.scl-left {
+  float: left;
+  height: auto;
+  padding: 10px 0;
+  width: 100%;
+}
+.scl-right {
+  float: left;
+  height: auto;
+  width: 100%;
+}
+.scl-right > p {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 10px;
+  text-align: center;
+}
+.slider {
+  max-width: 76%;
+  width: 100%;
+}
+.link-lists ul {
+  float: none;
+  height: auto;
+  margin: 0 auto;
+  width: 44%;
+}
+.link-lists li:first-child {
+  display: list-item;
+}
+.link-lists ul li {
+width: 100%;
+}
+footer {
+  float: left;
+  height: auto;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 75%;
+  display: table;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+}
+@media(max-width:767px) {
+  .slider {
+  max-width: 63%;
+  width: 100%;
+}
+.client-login-text {
+  margin-bottom: 10px;
+  max-width: 690px;
+  width: 34%;
+}
+.client-login-text p.client-lg-smalltxt {
+  line-height: 17px;
+}
+.dotted-borders {
+  max-width: 62%;
+  width: 100%;
+}
+.thumbnail-images {
+  float: none;
+  margin: 0 auto;
+  max-width: 68%;
+  width: 100%;
+  position: relative;
+  margin-left: 66px;
+}
+.link-lists ul {
+  width: 56%;
+}
+.social-icns {
+  width: 62%;
+}
+footer {
+  max-width: 66%;
+}
+}
+@media(max-width:639px) {
+  .slider {
+  max-width: 56%;
+  width: 100%;
+}
+.client-login-text {
+  margin-bottom: 10px;
+  max-width: 690px;
+  width: 26%;
+}
+.dotted-borders {
+  max-width: 55%;
+  width: 100%;
+}
+.link-lists ul {
+  width: 63%;
+}
+.thumbnail-images {
+  float: none;
+  margin: 0 auto 0 32px;
+  max-width: 60%;
+  position: relative;
+  width: 100%;
+}
+.social-icns {
+  width: 55%;
+}
+footer {
+  max-width: 55%;
+}
+}
+@media(max-width:579px) {
+  .slider {
+  max-width: 47%;
+  width: 100%;
+}
+.outer-client-login {
+  float: left;
+  height: 100px;
+  width: 60%;
+}
+.client-login-text {
+  margin-bottom: 10px;
+  max-width: 690px;
+  width: 47%;
+}
+.dotted-borders {
+  max-width: 54%;
+  width: 100%;
+}
+.link-lists ul {
+  width: 70%;
+}
+.thumbnail-images {
+  float: none;
+  margin: 0 auto 0 32px;
+  max-width: 51%;
+  position: relative;
+  width: 100%;
+}
+.social-icns {
+  width: 54%;
+}
+footer {
+  max-width: 50%;
+  width: 50%;
+}
+}
+@media(max-width:479px) {
+  .slider {
+  max-width: 34%;
+  width: 100%;
+}
+.client-login-text {
+  margin-bottom: 10px;
+  max-width: 690px;
+  width: 42%;
+}
+.client-login-text p {
+  width: 80%;
+}
+.link-lists {
+  width: 59%;
+}
+.link-lists ul {
+  width: 76%;
+}
+.thumbnail-images {
+  float: none;
+  margin: 0 auto 0 59px;
+  max-width: 47%;
+  position: relative;
+  width: 100%;
+  display: table;
+}
+.social-icns {
+  width: 34%;
+}
+footer ul {
+  float: left;
+  height: auto;
+  width: 55%;
+}
+footer {
+  max-width: 67%;
+  width: 70%;
+}
+}
+@media(max-width:320px) {
+  .slider {
+  max-width: 31%;
+  width: 100%;
+}
+.client-login-text p {
+  width: 72%;
+}
+.link-lists ul {
+  width: 83%;
+}
+.thumbnail-images {
+  display: table;
+  float: none;
+  margin: 0 auto 0 33px;
+  max-width: 47%;
+  position: relative;
+  width: 100%;
+}
+.social-icns {
+  width: 30%;
+}
+footer ul {
+  float: left;
+  height: auto;
+  width: 40%;
+}
+footer {
+  max-width: 78%;
+  width: 78%;
+}
+
+}
+
+      </style>
+   </head>
+   <body>
+      <div class="container-wrapper">
+        <div class="container no-padding">
+          <header>
+            <div class="header-top">
+              <div class="header-logo">
+                <img src="images/logo.png">
+              </div>
+              <div class="cash-flow-text">
+                <h6 class="cash-flw">cash-flowing the future of american small business.&trade;</h6>
+              </div>
+              <div class="toll-free-no">
+                <div class="resp-menu-item">
+                  <img id="res-menu" src="images/menu.png"/>
+                </div>
+                <ul>
+                  <li>Toll free</li>
+                  <li><img src="images/Phone.png"></li>
+                  <li>855-952-0700</li>
+                </ul>
+              </div>
+            </div>
+            <div class="header2">
+              <div class="apply-go">
+                <input class="inp1" type="button" value="apply online today">
+                <input class="inp2" type="button" value="go>">
+              </div>
+              <div class="menu-item">
+                <ul>
+                  <li>how a cash-flow advance works</li>
+                  <li>about nectar</li>
+                  <li>faq's</li>
+                  <li>contact us</li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <div class="slide-section">
+            <div class="slider">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="images/Banner.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="images/Banner.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="images/Banner.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="images/Banner.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="client-login-whole">
+            <div class="outer-client-login">
+              <div class="client-login">
+                <p class="client-lg-title">client login</p>
+                <label>username</label><input type="text">
+                <label>password</label><input type="text">
+                <button type="submit">go></button> 
+              </div>
+            </div>
+            <div class="client-login-text">
+              <p><span>nectar cash-flow advances</span> enable business owners everywhere to use future credit and debit card sales as working capital today.</p>
+
+              <p class="client-lg-smalltxt">Our commitment to supporting American Small Business growth is such that we only get paid when our client gets paid.
+              We are invested as much in their success as they are. <a href="#">Click to read more ></a></p>
+            </div>
+            <div class="dotted-borders">
+
+            </div>
+            <div class="link-lists">
+              <ul>
+                <li><a href="#">pre-qualify in 24 hours</a></li>
+                <li><a href="#">funded within 10 days</a></li>
+                <li><a href="#">no personal guarantee</a></li>
+                <li><a href="#">no collateral pledge</a></li>
+                <li><a href="#">no fixed payment schedule</a></li>
+                <li><a href="#">no business use restrictions</a></li>
+              </ul>
+            </div>
+            <div class="thumbnail-images">
+              <div class="thumbnail-one">
+                <div class="thumbnail-head">
+                  <div class="twit-icn">
+                  </div>
+                  <p>Restaurant Advances</p>
+                </div>
+                <div class="thumbnail-img">
+                  <img src="images/image-1.png">
+                </div>
+              </div>
+              <div class="thumbnail-one">
+                <div class="thumbnail-head">
+                  <div class="twit-icn">
+                  </div>
+                  <p>Retail store advances</p>
+                </div>
+                <div class="thumbnail-img">
+                  <img src="images/image-2.png">
+                </div>
+              </div>
+              <div class="thumbnail-one">
+                <div class="thumbnail-head">
+                  <div class="twit-icn">
+                  </div>
+                  <p>beauty industry advances</p>
+                </div>
+                <div class="thumbnail-img">
+                  <img src="images/image-3.png">
+                </div>
+              </div>
+              <div class="thumbnail-one no-right-margin">
+                <div class="thumbnail-head">
+                  <div class="twit-icn">
+                  </div>
+                  <p>medical office advances</p>
+                </div>
+                <div class="thumbnail-img">
+                  <img src="images/image-4.png">
+                </div>
+              </div>
+            </div>
+            <div class="social-icns">
+              <div class="scl-left">
+                <ul>
+                  <li><img src="images/fb.png"> <span>fan page</span></li>
+                  <li><img src="images/twitter.png"> <span>follow us</span></li>
+                </ul>
+              </div>
+              <div class="scl-right">
+                  <p>Nectar cash-flow Advances   &copy;2011 All rights reserved</p>
+              </div>
+            </div>
+            <footer>
+              <ul>
+                <li><a href="#">Business Cash Advance</a><span> | </span></li>
+                <li><a href="#">Small Business Loans</a><span> | </span></li>
+                <li><a href="#">Business Financing</a><span> | </span></li>
+                <li><a href="#">Merchant Loans</a><span> | </span></li>
+                <li><a href="#">Restaurant Loans</a><span> | </span></li>
+                <li><a href="#">Unsecured Loans</a><span> | </span></li>
+                <li><a href="#">Merchant Cash Advance</a></li>
+              </ul>
+            </footer>
+          </div>
+        </div>
+      </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+   $('#myCarousel').carousel({
+    interval: 3000
+      });
+   </script>
+    <script>
+
+      $(document).ready(function(){
+        var w=$(window).width();
+        var h=$(window).height();
+        $('#res-menu').click(function(){
+          $('.menu-item').slideToggle(900);
+        });
+         $(".menu-item").show();
+        if(w <= 1023){
+        $(".menu-item").hide();
+        }
+      });
+      $(window).resize(function(){
+        var $body = $(this.ie6 ? document.body : document)
+        var w=$(window).width();
+        $(".menu-item").show();
+        if(w <= 1023){
+        $(".menu-item").hide();
+        }
+      });
+    
+    </script>
+   </body>
+</html>
